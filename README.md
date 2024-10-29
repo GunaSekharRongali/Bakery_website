@@ -1,3 +1,3 @@
 ## Bakery Website
 
-(https://bakery-website-wine.vercel.app/)
+[Website link](https://bakery-website-wine.vercel.app/)
