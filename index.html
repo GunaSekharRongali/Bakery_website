@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Single-Page App</title>
+    <meta name="description" content="Discover freshly baked pastries, cakes, and breads made with premium ingredients at Bakery.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#" onclick="logClick('Logo clicked')">
+                <img class="img-fluid custom-image" src="pngtree-bakery-logo-vector-png-image_681083__1_-removebg-preview.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" onclick="logClick('Navbar toggler clicked')">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end d-block d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" onclick="logClick('Offcanvas close button clicked')"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-4 active" aria-current="page" href="#bakery-items" onclick="logClick('Products link clicked')">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#features" onclick="logClick('Features link clicked')">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#contact" onclick="logClick('Contact us link clicked')">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link fs-3 active" aria-current="page" href="#bakery-items" onclick="logClick('Products link clicked')">Products</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link fs-3" href="#features" onclick="logClick('Features link clicked')">Features</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link fs-3" href="#contact" onclick="logClick('Contact us link clicked')">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Banner Section -->
+    <section id="banner" class="banner h-25">
+        <img src="banner.webp" class="banner-image img-fluid" alt="Banner Image" onclick="logClick('Banner image clicked')">
+    </section>
+
+<section id="about-us" class="container my-5">
+    <h2 class="section-heading">About Our Bakery</h2>
+    <p class="section-description md-h-100">Our bakery offers a wide variety of freshly baked goods. We use only the finest ingredients to create delicious treats for you and your family.</p>
+</section>
+<section id="our-specialties" class="container my-5">
+    <h2 class="section-heading">Our Specialties</h2>
+    <p class="section-description">From cakes to cookies, our bakery specializes in making high-quality, delicious baked goods. Every item is crafted with care and passion.</p>
+</section>
+
+<section id="discount" class="container my-5"> 
+    <h2 class="text-center">Discount</h2>
+    <div class="image-slider d-flex overflow-auto">
+        <img src="../discount images/bakerydiscount.7.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 1 clicked')">
+        <img src="../discount images/bakerydiscount1.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 2 clicked')">
+        <img src="../discount images/bakerydiscount10.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 3 clicked')">
+        <img src="../discount images/bakerydiscount2.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 4 clicked')">
+        <img src="../discount images/bakerydiscount3.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 5 clicked')">
+        <img src="../discount images/bakerydiscount4.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 6 clicked')">
+        <img src="../discount images/bakerydiscount5.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 7 clicked')">
+        <img src="../discount images/bakerydiscount6.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 8 clicked')">
+        <img src="../discount images/bakerydiscount8.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 9 clicked')">
+        <img src="../discount images/bakerydiscount9.jpg" alt="bakerydiscount" class="img-fluid mx-2" style="width: 200px; height: auto;" onclick="logClick('Discount image 10 clicked')">
+    </div>
+</section>
+
+
+
+<!-- Bakery Items Section -->
+<section id="bakery-items" class="container my-5">
+    <h2 class="text-center">Our Bakery Items</h2>
+    <div class="row" id="bakery-items-container"></div>
+</section>
+
+<!-- Features Section with Carousel -->
+<section id="features" class="container my-5">
+    <div id="featureCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/chocolate-croissant-fresh-baked-wooden-table-homemade_1268-27794.jpg" class="d-block w-100 carousel-image" alt="Feature 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/baguettes-2561_640.jpg" class="d-block w-100 carousel-image" alt="Feature 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/3d-challah-dish-hanukkah_23-2151129278.jpg" class="d-block w-100 carousel-image" alt="Feature 3">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/cupcakes-5116009_640.jpg" class="d-block w-100 carousel-image" alt="Feature 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#featureCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#featureCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</section>
+
+<section id="bakery-locator" class="container d-flex flex-column mb-3 my-5">
+    <h2 class="text-center">Find Us</h2>
+    <p class="text-center">Visit us at our locations or find the nearest branch below.</p>
+    
+    <!-- Map Container -->
+    <div class="container mb-10">
+        <img class="img-fluid mb-4" src="map.webp" alt="map">
+    </div>
+    
+    <!-- Branches List -->
+    <div class="d-flex flex-wrap pl-4 text-center">
+        <div class="col-md-4 p-2">
+            <h4>Downtown Bakery</h4>
+            <p>123 Main Street, City, ZIP</p>
+            <button class="btn btn-secondary" onclick="showOnMap('123 Main Street, City')">View on Map</button>
+        </div>
+        <div class="col-md-4 p-2">
+            <h4>Uptown Bakery</h4>
+            <p>456 High Street, City, ZIP</p>
+            <button class="btn btn-secondary" onclick="showOnMap('456 High Street, City')">View on Map</button>
+        </div>
+        <div class="col-md-4 p-2">
+            <h4>Eastside Bakery</h4>
+            <p>789 East Ave, City, ZIP</p>
+            <button class="btn btn-secondary" onclick="showOnMap('789 East Ave, City')">View on Map</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center" onclick="logClick('Contact Us header clicked')">Contact Us</h2>
+    <form class="contact-form" onsubmit="logClick('Contact form submitted')">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required onclick="logClick('Name input clicked')">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" required onclick="logClick('Email input clicked')">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="4" required onclick="logClick('Message textarea clicked')"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="logClick('Submit button clicked')">Submit</button>
+    </form>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
